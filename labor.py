@@ -24,3 +24,10 @@ try:
     print("Loaded YAML data:", data)
 except Exception as e:
     print("Failed to load YAML data from file:", e)
+output_file = "output.yml"
+try:
+    with open(output_file, "w") as file:
+        yaml.dump(data, file)
+    print("YAML data saved to", output_file)
+except Exception as e:
+    print("Failed to save YAML data:", e)
