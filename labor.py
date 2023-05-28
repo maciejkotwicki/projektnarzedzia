@@ -31,3 +31,12 @@ try:
     print("YAML data saved to", output_file)
 except Exception as e:
     print("Failed to save YAML data:", e)
+xml_file = "file.xml"
+try:
+    tree = ET.parse(xml_file)
+    root = tree.getroot()
+    print("Loaded XML data:")
+    for child in root:
+        print(child.tag, child.text)
+except Exception as e:
+    print("Failed to load XML data from file:", e)
