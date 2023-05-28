@@ -17,3 +17,10 @@ try:
     print("JSON data saved to", output_file)
 except Exception as e:
     print("Failed to save JSON data:", e)
+yml_file = "file.yml"
+try:
+    with open(yml_file, "r") as file:
+        data = yaml.safe_load(file)
+    print("Loaded YAML data:", data)
+except Exception as e:
+    print("Failed to load YAML data from file:", e)
