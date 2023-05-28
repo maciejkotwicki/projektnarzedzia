@@ -10,3 +10,10 @@ try:
     print("Loaded JSON data:", data)
 except Exception as e:
     print("Failed to load JSON data from file:", e)
+output_file = "output.json"
+try:
+    with open(output_file, "w") as file:
+        json.dump(data, file, indent=4)
+    print("JSON data saved to", output_file)
+except Exception as e:
+    print("Failed to save JSON data:", e)
